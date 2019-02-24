@@ -12,12 +12,12 @@ const App = () => {
   const [url, setUrl] = useState('-')
   const [checkboxChecked, setCheckboxChecked] = useState(true)
   const [countries, setCountries] = useState([])
-  const [range, setRange] = useState({start: 1960, end: 2017})
+  const [range, setRange] = useState({start: 1960, end: new Date().getFullYear()})
 
 
   const search = (event) => {
     event.preventDefault()
-    setUrl(baseUrl + '/co2/country/' + query +'/1960/2017/' + checkboxChecked)
+    setUrl(baseUrl + '/co2/country/' + query +'/1960/' + new Date().getFullYear() + '/' + checkboxChecked)
   }
 
   const handleChange = (event) => {
@@ -31,7 +31,7 @@ const App = () => {
     setData([])
     setUrl('')
     setCountries([])
-    setRange({start: 1960, end: 2017})
+    setRange({start: 1960, end: new Date().getFullYear()})
   }
 
   const handleSetRangeStart = (event) => {
