@@ -1,7 +1,7 @@
 import React from 'react'
 import {Form, Button, Row, Col} from 'react-bootstrap'
 
-const SearchButton = ({handleChange, search, handleCheckbox,
+const SearchButton = ({handleInputChange, search, handleCheckbox,
                         checkboxDefault, reset, checkboxDisabled,
                         handleRangeStart, handleRangeEnd, range}) => {
   
@@ -11,7 +11,7 @@ const SearchButton = ({handleChange, search, handleCheckbox,
             <Col>
                 <Form.Control 
                 type = 'text'
-                onChange = {handleChange}
+                onChange = {handleInputChange}
                 />
             </Col>
         </Row>
